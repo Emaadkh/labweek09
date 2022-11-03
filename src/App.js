@@ -1,24 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { Fragment } from 'react';
+import College from './College';
+import Student from './Student';
+
+let stu = {
+  fname: "Emad",
+  lname: "Khodabakhshi",
+  id: 101215212
+}
 
 function App() {
   return (
+    <Fragment>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Welcome to Fullstack Development - I</h2>
+        <h3>React JS Programming Week09 Lab exercise</h3>
+        <Student student = {stu}/>
+        <College city="Toronto"/>
       </header>
     </div>
+    </Fragment>
   );
 }
 
